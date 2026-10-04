@@ -37,7 +37,7 @@ jobs:
           sdkmanager --install "platforms;android-35" "platform-tools" || true
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Build release APK
         run: ./gradlew assembleRelease --no-daemon --stacktrace
